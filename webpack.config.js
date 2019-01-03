@@ -1,6 +1,8 @@
 var path = require("path");
+const webpack = require('webpack');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const postcss = require('postcss-cssnext');
 
 
 module.exports = {
@@ -10,8 +12,7 @@ module.exports = {
 		filename: "main.js"
 	},
 	module: {
-		rules: [
-			{
+		rules: [{
 				test: /\.m?js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
@@ -22,20 +23,31 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.scss$/, 
+				test: /\.scss$/,
 				loader: [
 					MiniCSSExtractPlugin.loader,
 					"css-loader",
+					'postcss-loader',
 					'sass-loader'
 				]
-			  }
+			},
+			{
+				test: /\.hbs$/,
+				loader: "handlebars-loader"
+			}
 		]
-    },
-    plugins: [
-        new HTMLWebpackPlugin({
-            filename: 'index.html', 
-            template: './src/index.html',
+	},
+	plugins: [
+		new webpack.LoaderOptionsPlugin({
+            options: {
+              handlebarsLoader: {}
+            }
+          }), 
+		new HTMLWebpackPlugin({
+			template: './src/modulos/index.hbs',
+			templateParameters:require('./src/modulos/data/items.json')
+
 		}),
 		new MiniCSSExtractPlugin()
-    ]
+	]
 };

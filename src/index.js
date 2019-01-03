@@ -1,9 +1,8 @@
 /* css */
-import '../src/estilos.scss'
+import '../src/scss/estilos.scss'
 
-function component() {
-    let element = document.createElement('div');
-    element.innerHTML = "Torpedoooor!";
-    return element;
-  }
-document.body.appendChild(component());
+// JS
+import saludo from "./saludo"
+
+console.log(saludo('alberto'))
+
