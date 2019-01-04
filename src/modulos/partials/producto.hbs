@@ -1,11 +1,16 @@
+       
+{{#each items}}
         {{#if @first}}
-        <div class="producto primero">
+        <div class="caja primero">
         {{else}}
-        <div class="producto ">
-        {{/if}}
-                <p>{{unsaludo}}</p>
-                <p>{{saludar}}</p>
-                <h3>{{@index}} - {{nombre_prod}}</h3>
+        {{#if @last}}
+        <div class="caja ultimo">
+        {{else}}
+        <div class="caja ">
+        {{/if}} {{/if}}
+                <h2>{{nombre}}</h2>
+                <h3>{{saluda nombre }}</h3>
+                <p>{{@index}} - {{nombre_prod}}</p>
                 <p>key: {{@key}}</p>
                 <span>Id Ref: {{_id.$num}} </span>
                 <p>Productor: {{productor}}</p>
@@ -24,3 +29,4 @@
                 <p>Tel {{miContacto.tel}}</p>
                 {{/with}}
         </div>
+{{/each}}

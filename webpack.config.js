@@ -33,7 +33,12 @@ module.exports = {
 			},
 			{
 				test: /\.hbs$/,
-				loader: "handlebars-loader"
+				loader: "handlebars-loader",
+				options: {
+					helperDirs: path.join( __dirname, './src/modulos/helpers' ),
+					partialDirs: path.join( __dirname, './src/modulos/partials' ),
+					knownHelpersOnly: false
+				  }
 			}
 		]
 	},
