@@ -1,3 +1,3 @@
 # webpack-project
-npm i to install 
+npm i to install -
 npm start to run
