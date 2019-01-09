@@ -2,7 +2,11 @@
 import '../src/scss/estilos.scss'
 
 // JS
-import saludo from "./saludo"
+import otro from "./modulos/js/otro";
+otro()
 
-console.log(saludo('alberto'))
+
+// misdatos
+// import misdatos from "./modulos/data/misdatos";
+// console.log(misdatos);
 
