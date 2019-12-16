@@ -35,8 +35,10 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^2.1.0",
-    "style-loader": "^0.23.1",
-    "producto": "aldiarian/producto"
+    "producto": "aldiarian/producto",
+    "style-loader": "^0.23.1"
   }
 }
