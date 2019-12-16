@@ -8,3 +8,17 @@
         font-size: 18px;
     }
 }
+
+
+.receta{
+    width: 33%;
+    padding: 0;
+    background-color: #fedc9c;
+    padding: 0px 1em;
+    list-style: none;
+    &-img{
+        border-radius: 50px;
+        width: 150px;
+    }
+}
+

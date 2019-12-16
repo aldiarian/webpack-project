@@ -4,7 +4,9 @@ require("babel-polyfill");
 import '../src/scss/estilos.scss'
 
 // JS
-import Search from './modulos/js/search';
+import Search from './modulos/js/models/search';
+import {elements} from './modulos/js/views/base_elements';
+import * as searchView from './modulos/js/views/searchView';
 
 /** Estado Global de la aplicación
     - objeto buscar
@@ -18,7 +20,7 @@ const state = {
 
 const controlSearch = async ()=>{
     // 1) Tomar la búsqueda de la vista
-    const query = 'pizza';
+    const query = searchView.getInput();
     
     if(query){
         // 2) Nueva búsqueda y añadirla en el estado
@@ -35,7 +37,7 @@ const controlSearch = async ()=>{
     }
 }
 
-document.querySelector('.buscador').addEventListener('submit', e => {
+elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
     

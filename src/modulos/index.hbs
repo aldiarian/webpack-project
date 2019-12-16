@@ -7,14 +7,22 @@
     <p>Módulo llamado desde un repositorio</p>  
   <div class="contenedor">
     
-    <form id="form-search" role="search" class="buscador">
-        <input type="search" id="miBusqueda" name="buscar" 
+    <form id="form-search" role="search" class="searchForm">
+        <input type="search" id="miBusqueda" name="buscar"  class="searchInput"
         autocomplete="on"
         placeholder="buscar receta..."
         aria-label="buscar receta"/>
         <button form="form-search">Buscar receta</button>
     </form>
     
+    <ul class="receta">
+      <li>
+        <p>Nombre</p>
+        <p>Listo en : xxxx minutos</p>
+        <p>Para 6 personas</p>
+        <img class="receta-img" src="xx" alt="">
+      </li>
+    </ul>
   </div>
 </body>
 </html>
