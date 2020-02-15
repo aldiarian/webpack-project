@@ -25,7 +25,6 @@
     "html-webpack-plugin": "^3.2.0",
     "lodash": "^4.17.11",
     "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
     "normalize.css": "^8.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^3.0.0",
@@ -38,7 +37,9 @@
     "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "css-loader": "^2.1.0",
+    "node-sass": "^4.13.1",
     "producto": "aldiarian/producto",
+    "sass": "^1.25.0",
     "style-loader": "^0.23.1"
   }
 }
