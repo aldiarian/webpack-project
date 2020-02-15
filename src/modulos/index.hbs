@@ -6,15 +6,7 @@
 <body>
     <p>Módulo llamado desde un repositorio</p>  
   <div class="contenedor">
-    
-    <form id="form-search" role="search" class="buscador">
-        <input type="search" id="miBusqueda" name="buscar" 
-        autocomplete="on"
-        placeholder="buscar receta..."
-        aria-label="buscar receta"/>
-        <button form="form-search">Buscar receta</button>
-    </form>
-    
+    {{> $producto/producto}}
   </div>
 </body>
 </html>
