@@ -1,4 +1,4 @@
-import './estilos.scss';
+import './scss/estilos.scss';
 
 
-console.log('buenaas');
+console.log('buenaas asdf');
